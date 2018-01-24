@@ -1,0 +1,65 @@
+/* pages/my/my.wxss */
+/*公共样式*/
+.icon{
+  width: 32rpx;
+  height: 32rpx;
+  margin: 28rpx 16rpx 0rpx 26rpx;
+  float: left;
+}
+
+.same{
+  color: #666;
+  margin-top: 28rpx;
+  float: left;
+}
+
+
+.picture{
+  width:100%;
+  height: 320rpx;
+  background-color: #52cac3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-block1{
+  width:100%;
+  height: 88rpx;
+  background-color: #fff;
+}
+
+.list-block{
+  width:100%;
+  height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+}
+
+.p-text{
+  font-size: 36rpx;
+  color: #fff;
+  float: left;
+  margin: 36rpx 0rpx 0rpx 0rpx;
+}
+.p-header{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  border: 10rpx solid #fff;
+  margin: 30rpx 0rpx 0rpx 0rpx;
+}
+
+.l-out{
+  width: 15rpx;
+  height: 22rpx;
+  float: right;
+  margin-top: 33rpx;
+  margin-right: 38rpx;
+
+}
+
+
+
+
+

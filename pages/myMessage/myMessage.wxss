@@ -1,0 +1,5 @@
+.msgTit{font-size: 28rpx;color: #666;font-weight: bolder;padding: 38rpx 32rpx 30rpx 32rpx;}
+.msgTit text{font-size: 23rpx;color: #999;float: right}
+.msgCon{padding: 0 42rpx 30rpx 42rpx;}
+.msgCon text{display: block;line-height: 44rpx;font-size: 23rpx;color: #999;}
+.msgList{background: #fff;}

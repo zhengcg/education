@@ -1,0 +1,121 @@
+<!--pages/userinfo/userinfo.wxml-->
+
+
+<view class="mian">
+<!--公共条-->
+<view class="common-box"></view>
+<view class="picture">
+<view class="p-text">头像</view>
+  <image class="p-header" src="{{avatarUrl}}" ></image>
+</view>
+<!--<view class="list-block">
+  <view class="same">昵称</view>
+  <view class="r-same"><input name="nickname" placeholder="输入昵称" type="text" class="text" bindblur=""/></view>
+</view>-->
+<view class="list-block">
+  <view class="same">真实姓名</view>
+  <view class="r-same"><input name="realname" placeholder="输入真实姓名" type="text" class="text" bindblur="setName" value="{{name}}"/></view>
+</view>
+<view class="list-block">
+  <view class="same"><text style="color:red">*</text> 年级</view>  
+    
+  <view class="r-same1">
+    <picker bindchange="selectArea" value="{{curArray}}" range="{{classAge.array}}">
+        <view class="picker">
+        {{classAge.array[curArray]}}
+       <image class="l-out" src="../../images/index-address-down.png"></image>
+        </view>
+    </picker>
+  </view>
+</view>
+<view class="list-block">
+  <view class="same">个性签名</view>
+  <view class="r-same"><input name="signName" placeholder="输入个性签名" type="text" class="text" bindblur="setMotto"/></view>
+</view>
+
+<!--公共条-->
+<view class="common-box"></view>
+
+<view class="list-block1">
+  <view class="same">所在地区</view>  
+    <view class="r-same1">
+    <picker bindchange="changeArea" value="{{curArea}}" range="{{classArea.array}}">
+        <view class="picker">
+        {{classArea.array[curArea]}}  
+        <image class="l-out" src="../../images/index-address-down.png"></image>    
+        </view>
+    </picker>
+    </view>
+</view>
+<view class="list-block">
+  <view class="same">出生年月</view> 
+  
+  <view class="r-same1">
+    <picker mode="date" value="{{birthday}}" start="1970-1-1" end="2017-09-01" bindchange="bindDateChange">
+      <view class="picker">
+        {{birthday}}
+        <image class="l-out" src="../../images/index-address-down.png"></image>
+      </view>
+    </picker>
+  </view>
+</view>
+<view class="list-block">
+<view class="same">性别</view>
+  <!--单选按钮设置-->
+  <view class="list-radio">
+    <radio-group class="radio-group" bindchange="radioChange">
+        <label class="radio" wx:for="{{items}}" wx:key>
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+        </label>
+    </radio-group>
+  </view>
+</view>
+
+<!--公共条-->
+<view class="common-box"></view>
+
+<view class="list-block1">
+  <view class="same">手机</view>
+  <view class="r-same">
+  <input name="telNum" placeholder="输入手机号" type="number" class="text" bindblur="setPhone" value="{{tel}}"/>
+  </view>
+</view>
+<view class="list-block">
+  <view class="same">微信</view>
+  <view class="r-same">
+  <input name="wxNum" placeholder="输入微信号" type="text" class="text" value="{{wx}}"/>
+  </view>
+</view>
+<view class="list-block">
+  <view class="same">QQ</view>
+  <view class="r-same">
+  <input name="qqNum" placeholder="输入QQ号" type="number" class="text" bindblur="setQQ" value="{{QQ}}"/>
+  </view>
+</view>
+<view class="list-block">
+  <view class="same">Email</view>
+  <view class="r-same">
+  <input  placeholder="输入Email" type="text" class="text" bindblur="setEmail" value="{{email}}"/>
+  </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+<!--<view class="list-block">
+  <view class="same">奖金明细</view>
+   <image class="l-out" src="" bindtap="toMoneyDetail"></image>
+</view>
+<view class="list-block">
+  <view class="same">实名认证</view>
+   <image class="l-out" src="" bindtap="totelLogin"></image>
+</view>-->
+<button bindtap="submitForm" class="daohang">保存</button>
+</view>

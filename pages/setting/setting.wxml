@@ -1,0 +1,15 @@
+<view class="setting">
+    <view class="common-box"></view>
+    <view class="list" bindtap="clearFn">
+        <text>清除缓存</text>
+        <image class="l-out" src="../../images/common-scroll.png"></image>
+    </view>
+    <view class="common-box"></view>
+    <view class="list">
+        <text>推送消息</text>
+        <switch checked bindchange="switchChange"/>
+    </view>
+    <view class="btn">
+    <button type="primary" bindtap="logout">安全退出</button>
+    </view>
+</view>

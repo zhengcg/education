@@ -1,0 +1,130 @@
+<view class="course">
+<!--<view class="topT">
+    <view class="searchBox">
+        <view>
+            <view class="search-cells-input">
+                <input focus placeholder="输入关键词" confirm-type="search" type="text" bindconfirm="searchFn"/>
+            </view>
+            <image class="search-cells-icon2" src="../../images/search.png"></image>
+        </view>
+         <image class="carIcon" src="../../images/loveCar.png" bindtap="gotoCar"></image>
+    </view>
+</view>
+<view style="height:98rpx;"></view>
+    <view class="typeList">
+        <view class="type00 typeBox">
+            <text>难易</text>
+            <scroll-view class="tCon" scroll-x="true">
+            <text  class="{{selected0==0?'cur':'default'}}"  bindtap="selectedT00" data-id="0">全部</text>
+            <block wx:for="{{type00}}" wx:key="{{item.code}}" > 
+             <text  class="{{selected0==item.code?'cur':'default'}}"  bindtap="selectedT00" data-id="{{item.code}}">{{item.name}} </text>
+             </block>
+            </scroll-view>
+        </view>
+        <view class="type01 typeBox">
+            <text>年级</text>
+            <scroll-view class="tCon" scroll-x="true">
+             <text  class="{{selected==0?'cur':'default'}}"  bindtap="selectedT01" data-id="0">全部</text>
+            <block wx:for="{{type01}}" wx:key="{{item.code}}" > 
+             <text  class="{{selected==item.code?'cur':'default'}}"  bindtap="selectedT01" data-id="{{item.code}}">{{item.name}} </text>
+             </block>
+            </scroll-view>
+        </view>
+
+        <view class="type02 typeBox">
+            <text>科目</text>
+            
+            <scroll-view class="tCon" scroll-x="true" >
+            <text  class="{{selected1==0?'cur':'default'}}"  bindtap="selectedT02" data-id="0">全部 </text>
+            <block wx:for="{{type02}}" wx:key="{{item.code}}" > 
+             <text  class="{{selected1==item.code?'cur':'default'}}"  bindtap="selectedT02" data-id="{{item.code}}">{{item.name}} </text>
+             </block>
+            </scroll-view>
+        </view>
+
+        <view class="type03 typeBox">
+            <text>师傅</text>
+            <scroll-view class="tCon" scroll-x="true">
+            <text  class="{{selected2==0?'cur':'default'}}"  bindtap="selectedT03" data-id="0">全部 </text>
+            <block wx:for="{{type03}}" wx:key="{{item.code}}" > 
+             <text  class="{{selected2==item.code?'cur':'default'}}"  bindtap="selectedT03" data-id="{{item.code}}">{{item.name}} </text>
+             </block>
+            </scroll-view>
+        </view>
+
+    </view>-->
+
+
+    <view class="common-box"></view>
+    <scroll-view scroll-y="true" style="background:#fff;">
+    <block wx:for="{{lists}}" wx:key="{{item.id}}">
+        <view class="videoList" data-id="{{item.id}}">
+
+            <view class="imgBox" bindtap="gotoPlay" data-id="{{item.id}}">
+                <image src="{{item.imgUrl}}"></image>
+                <text>播放{{item.times}}次</text>
+            </view>
+
+            <view class="con">
+                <view class="contit" bindtap="gotoPlay" data-id="{{item.id}}">
+
+                    <image wx:if="{{item.subject.code==1}}" src="../../images/yu.png"></image>
+                    <image wx:elif="{{item.subject.code==2}}" src="../../images/shu.png"></image>
+                    <image wx:elif="{{item.subject.code==3}}" src="../../images/ying.png"></image>
+                    <image wx:elif="{{item.subject.code==4}}" src="../../images/zheng.png"></image>
+                    <image wx:elif="{{item.subject.code==5}}" src="../../images/wu.png"></image>
+                    <image wx:elif="{{item.subject.code==6}}" src="../../images/hua.png"></image>
+                    {{item.title}}
+                </view>
+                <view class="teacher">
+                    <text>{{item.docentName}}</text>
+                    <image src="../../images/clock.png"></image>
+                    <text>{{item.duration}}</text>                
+                </view>
+                <view class="mian">
+                    <block wx:if="{{item.optPrice<=0&&!item.mine}}">
+                    <text class="red">免费</text>
+                    <view style="display:inline" bindtap="addCourse" data-id="{{item.id}}">
+                        <image src="../../images/joinUs.png"></image>
+                        <text>加入我的课程</text>  
+                    </view>  
+                    </block> 
+                    <block wx:if="{{item.optPrice>0&&!item.mine}}">
+                    <text class="red">￥{{item.optPrice}}</text>
+                    <view style="display:inline" bindtap="addCar" data-id="{{item.id}}">
+                        <image src="../../images/car.png"></image>
+                        <text>加入购物车</text>  
+                    </view>  
+                    </block>   
+                    <block wx:if="{{item.optPrice<=0&&item.mine}}">
+                    <text class="red">免费</text>
+                    <view style="display:inline" bindtap="removeCourse" data-id="{{item.id}}">
+                        <image src="../../images/delete.png"></image>
+                        <text>移除我的课程</text>  
+                    </view>  
+                    </block> 
+                    <block wx:if="{{item.optPrice>0&&item.mine}}">
+                    <text class="red">￥{{item.optPrice}}</text>
+                    <view style="display:inline"  data-id="{{item.id}}">
+                        <image src="../../images/car.png"></image>
+                        <text>已购买</text>  
+                    </view>  
+                    </block>                                                             
+                </view>
+                <view class="label">
+                    <label>{{item.grade.name}}</label>
+                    <label>{{item.bookVersion.name}}</label>
+                    <label>{{item.difficulty.name}}</label>
+                </view>                
+            </view>
+
+            <view class="type" bindtap="gotoPlay" data-id="{{item.id}}">
+                <image src="../../images/videoBig.png"></image>
+            </view>
+        </view>
+    
+    </block>
+    </scroll-view>
+</view>
+
+

@@ -1,0 +1,170 @@
+<view class="mainBox">
+    <swiper indicator-dots="{{swipeData.indicatorDots}}" autoplay="{{swipeData.autoplay}}" interval="{{swipeData.interval}}" duration="{{swipeData.duration}}" class="adbanners" circular="{{swipeData.circular}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item class="adview" data-id="{{item.id}}" bindtap="gotoPlay">
+            <image src="{{item.imgSrc}}" class="slide-image" data-id="{{item.id}}"/>
+            <view>{{item.title}}</view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="search-cells">
+        <view class="section" mode = selector>
+            <picker bindchange="selectArea" value="{{curArray}}" range="{{searchData.array}}">
+                <view class="picker">
+                {{searchData.array[curArray]}}
+                <image class="search-cells-icon1" src="../../images/index-address-down.png"></image>
+                </view>
+            </picker>
+        </view>
+        <view class="search-cells-input">
+            <input placeholder="输入关键词" confirm-type="search" bindconfirm="searchFn" bindfocus="getHot" bindblur="setHot"/>
+            <view class="hotWord" hidden="{{isHot}}">
+                <view wx:for="{{hotWord}}" wx:key="{{index}}" data-word="{{item}}" bindtap="searchFns">{{item}}</view>
+            </view>
+        </view>
+        <image class="search-cells-icon2" src="../../images/search.png"></image>
+    </view>
+<!--<view class="today-tryst">今天有约</view>
+
+ <scroll-view class="tCon" scroll-x="true" >
+    <view class="courseList">
+        <view class="timeLine">
+            <view class="dot"></view>
+            <text>10:00</text>
+            <view class="line"></view>       
+        </view>
+        <view class="lists">
+            <view class="adview-box">
+             <image src="{{item1}}"/>
+             <view class="adview-box-text">
+                [10:00-11:00]高中生物.题型精选.必报
+                <view class="teacher-num"><text class="text1">岑老师</text><text class="text2">1234人已加入</text></view>
+             </view>
+            </view>
+
+            <view class="adview-box">
+             <image src="{{item2}}"/>
+             <view class="adview-box-text">
+                [10:00-11:00]高中生物.题型精选.必报
+                <view class="teacher-num"><text class="text1">岑老师</text><text class="text2">1234人已加入</text></view>
+             </view>
+            </view>
+        </view>
+    
+    </view>
+
+
+    <view class="courseList">
+        <view class="timeLine">
+            <view class="dot"></view>
+            <text>10:00</text>
+            <view class="line"></view>       
+        </view>
+        <view class="lists">
+            <view class="adview-box">
+             <image src="{{item1}}"/>
+             <view class="adview-box-text">
+                [10:00-11:00]高中生物.题型精选.必报
+                <view class="teacher-num"><text class="text1">岑老师</text><text class="text2">1234人已加入</text></view>
+             </view>
+            </view>
+        </view>
+    
+    </view>
+
+</scroll-view>-->
+
+<view class="common-box"></view>
+<view class="my-lesson">
+    <view class="title">
+        <text class="title-l">我的课程</text>
+        <text class="title-r" bindtap="gotoSearch">添加课程</text>
+        <image src="../../images/index-add-icon.png"></image>
+    </view>
+    <view class="noneS" hidden="{{myCourse.length>0 ? true : false}}">暂无数据</view>
+
+    <view class="my" wx:for="{{myCourse}}" wx:key="{{item.id}}" bindtap="gotoPlay" data-id="{{item.id}}" hidden="{{myCourse.length==0 ? true : false}}">
+        <view class="lesson"><image src="{{item.imgUrl}}"></image></view>
+        <view class="lesson-text">
+            <view class="text1">
+                <image wx:if="{{item.subject.code==1}}" src="../../images/yu.png"></image>
+                <image wx:elif="{{item.subject.code==2}}" src="../../images/shu.png"></image>
+                <image wx:elif="{{item.subject.code==3}}" src="../../images/ying.png"></image>
+                <image wx:elif="{{item.subject.code==4}}" src="../../images/zheng.png"></image>
+                <image wx:elif="{{item.subject.code==5}}" src="../../images/wu.png"></image>
+                <image wx:elif="{{item.subject.code==6}}" src="../../images/hua.png"></image>
+                <text>{{item.title}}</text>
+                <text class="text1-close">未开始</text>
+                <!--<text class="text1-open">进行中</text>-->
+            </view>
+            <view class="text2">
+                <text>{{item.docentName}}</text>
+                <image src="../../images/clock.png"></image>
+                <text>{{item.duration}}</text>
+            </view>
+            <view class="text3">
+                <view class="box box1">{{item.grade.name}}</view>
+                <view class="box box1">{{item.difficulty.name}}</view>
+                <view class="box box1">{{item.bookVersion.name}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="my-lesson-foot" bindtap="gotoCourse"><text>查看全部课程</text> </view>
+</view>
+
+<view class="common-box"></view>
+
+
+<view class="free-course">
+    <view class="title" bindtap="gotoFreeCourse">
+        <text class="title-l">免费课程</text>
+        <image class="icon" src="../../images/common-scroll.png"></image>
+    </view>
+    <view class="noneS" hidden="{{freeCourse.length>0 ? true : false}}">暂无数据</view>
+    <view class="content-course">
+        <view class="{{index%2==0?'content-box1':'content-box2'}}" wx:for="{{freeCourse}}"  bindtap="gotoPlay" data-id="{{item.id}}" wx:key="{{item.id}}" hidden="{{freeCourse.length==0 ? true : false}}">
+            <image src="{{item.imgUrl}}"/>
+            <view class="label"><text>{{item.subject.name}}</text>/<text>{{item.difficulty.name}}</text>/<text>{{item.grade.name}}</text>/<text>{{item.bookVersion.name}}</text></view>
+            <view class="content-box-text">
+                <text class="text">{{item.title}}</text>
+                <view class="teacher-num"><text class="text1">{{item.docentName}}</text><text class="text2">{{item.duration}}</text></view>
+             </view>
+         </view>
+    </view>
+</view>
+
+<view class="common-box"></view>
+<view class="my-lesson" >
+    <view class="title" bindtap="gotoLoveCourse">
+        <text class="title-l">猜你喜欢</text>
+        <image class="icon" src="../../images/common-scroll.png"></image>
+    </view>
+<view class="noneS"  hidden="{{loveCourse.length>0 ? true : false}}">暂无数据</view>
+    <view class="my" wx:for="{{loveCourse}}" wx:key="{{item.id}}"  bindtap="gotoPlay"  data-id="{{item.id}}" hidden="{{loveCourse.length==0 ? true : false}}">
+        <view class="lesson"><image src="{{item.imgUrl}}"></image></view>
+        <view class="lesson-text">
+            <view class="text1">
+                <image wx:if="{{item.subject.code==1}}" src="../../images/yu.png"></image>
+                <image wx:elif="{{item.subject.code==2}}" src="../../images/shu.png"></image>
+                <image wx:elif="{{item.subject.code==3}}" src="../../images/ying.png"></image>
+                <image wx:elif="{{item.subject.code==4}}" src="../../images/zheng.png"></image>
+                <image wx:elif="{{item.subject.code==5}}" src="../../images/wu.png"></image>
+                <image wx:elif="{{item.subject.code==6}}" src="../../images/hua.png"></image>
+                <text>{{item.title}}</text>
+                <text class="text1-close">{{item.optPrice==0?"免费":"￥"+item.optPrice}}</text>
+            </view>
+            <view class="text2">
+                <text>{{item.docentName}}</text>
+                <image src="../../images/clock.png"></image>
+                <text>{{item.duration}}</text>
+            </view>
+            <view class="text3">
+                <view class="box box1">{{item.grade.name}}</view>
+                <view class="box box1">{{item.difficulty.name}}</view>
+                <view class="box box1">{{item.bookVersion.name}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

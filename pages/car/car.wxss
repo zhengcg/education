@@ -1,0 +1,20 @@
+.car{width: 100%;height: 100%;position: relative}
+.tit{height: 96rpx;line-height: 96rpx;padding: 0 32rpx;}
+.tit text{color: #999;font-size: 28rpx;padding-left: 22rpx;}
+.carList{background: #fff;margin-bottom: 32rpx;padding: 32rpx;height:110rpx;position: relative }
+.carList label{margin-top: 36rpx;float: left}
+.carList .con{margin-left: 80rpx;height: 110rpx;position: relative}
+.carList .con .imgBox{float:left;height: 110rpx;width: 165rpx; }
+.carList .con .imgBox image{width: 165rpx;height: 110rpx;}
+.carList .con .cons{float: left;height: 110rpx;width: 345rpx;margin-left: 32rpx;}
+.carList .con .cons .consT{height: 50rpx;line-height: 50rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 28rpx;color: #444;}
+.carList .con .cons .consT image{width: 28rpx;height: 28rpx;margin-right: 10rpx;margin-top: 5rpx;}
+.carList .con .cons .teacher{color: #9c9c9c;font-size: 24rpx;height: 60rpx;line-height: 60rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis}
+.carList .con .cons .teacher text{color: #ff6262;font-size: 26rpx;margin-left: 32rpx;}
+.delete{width: 24rpx;height: 24rpx;position: absolute;right: 6rpx;top: 43rpx;}
+.delete image{height: 24rpx;width: 24rpx;}
+.foot{position: fixed;width: 100%;height: 100rpx;bottom: 0;left: 0;background: #fff;line-height: 100rpx;}
+.foot .he{text-align: center;color: #666;font-size: 32rpx;width: 530rpx;float: left;height: 100rpx;line-height: 100rpx;}
+.foot .he text{color: #e64340;padding-left: 24rpx;}
+.foot .btn{margin-left: 530rpx;height: 100rpx;background: #52cac3;color: #fff;text-align: center;font-size: 32rpx;}
+.addCourse{height: 100rpx;background: #52cac3;color: #fff;text-align: center;font-size: 32rpx;width: 200rpx;line-height: 100rpx;position: absolute;top: 50%;left: 50%;margin-left: -100rpx;margin-top: -50rpx;}

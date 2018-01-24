@@ -1,0 +1,113 @@
+
+<view class="play">
+<view>
+<view class="shadeDiv" wx:if="{{isShade}}" bindtap="tishi">
+    <!--<image src="../../images/onlond.png"></image>-->
+    <view class="v1">本课程为收费课时，继续观看，您可以购买本课程：</view>
+    <view class="v2">{{course.title}}</view>
+    <view class="v3">价格：¥ {{price}}</view>
+    <button class="purchase v4" bindtap="gotoPay">立即购买</button>
+</view>
+</view>
+    <view class="section tc"  wx:if="{{!isShade}}">
+        <video preload="meta" src="{{videoUrls}}"   controls bindplay="authPlay" poster="{{imgUrls}}" bindplay="play" bindended="ended" bindtimeupdate="isPlayF"></video>
+    </view>
+    
+    <view class="tabBox">
+        <view class="{{selected==1?'cur':'default'}}" data-id='1' bindtap="selectTab"><text data-id='1' catchtap="selectTab">内容介绍</text></view>
+        <view class="{{selected==2?'cur':'default'}}" data-id='2' bindtap="selectTab"><text data-id='2' catchtap="selectTab">评论</text></view>
+        <view class="{{selected==3?'cur':'default'}}" data-id='3' bindtap="selectTab"><text data-id='3' catchtap="selectTab">课表</text></view>
+    </view>
+
+    <template name="playCon">
+        <view class="playCon">
+            <view class="h1">{{title}}</view>
+            <text>{{content}}</text>
+            <view class="h1">出版社</view>
+            <text>{{bookVersion.remark}}</text>
+            <view class="h1">适用人群</view>
+            <text>{{grade.name}}</text>
+            <!--<view class="h1">教育机构</view>
+            <text>{{docentNameSuggest}}</text>-->
+            <view class="h1">教学老师</view>
+            <text>{{docentName}}</text>
+            <view class="h1">难易级别</view>
+            <text>{{difficulty.name}}</text>
+            <view class="h1">所属科目</view>
+            <text>{{subject.name}}</text>
+        </view>
+    </template>
+    <template name="comment">
+        <view class="comment">
+            <view class="zan" bindtap="zan">
+                <image src="../../images/zan.png"></image>
+                <text>{{zan}}</text>
+                <view>点赞该课程</view>
+            </view>
+            <view class="common-box"></view>
+            <view class="bindFormSubmit">
+                <form bindsubmit="bindFormSubmit" >
+                    <view class="textArea">
+                    <textarea placeholder="请输入评价" name="textarea"/>
+                    </view>  
+                    <view class="butArea">
+                    <button form-type="submit"> 发布评论 </button>
+                    </view>             
+                    
+                </form>
+            </view>
+            
+            <view class="common-box"></view>
+            <view class="commmetList">
+                <block wx:for="{{comments}}" wx:key="{{item.id}}">
+                    <view>
+                        <view class="imgBox"><image src="../../images/test.png"></image></view>
+                        <view class="con">
+                            <view class="tit">{{item.uname}}</view>
+                            <text>{{item.content}}</text>
+                        </view>
+                        <view class="date">{{item.cdate}}</view>                   
+                    </view>
+                </block>           
+            </view>
+        </view>
+    </template>
+    <template name="course" >
+        <view class="courseList">
+            <view wx:for="{{courseList}}" wx:key="{{item.id}}" class="{{bId==item.id?'cur':'default'}}" bindtap="bofang" data-id="{{item.id}}" >
+                <text>{{item.title}}</text>
+                <image src="../../images/v.png"></image>          
+            </view>                   
+        </view>
+    
+    </template>
+    <template name="default"></template>
+
+    <template is="{{name=='playCon'?'playCon':'default'}}" data="{{...course}}"/>
+    <template is="{{name=='comment'?'comment':'default'}}" data="{{zan,comments}}"/>
+    <template is="{{name=='course'?'course':'default'}}" data="{{courseList,bId}}"/>
+
+
+</view>
+<view style="height:100rpx;"></view>
+<view class="foot">
+    <button open-type="share" class="shareBtn">
+        <image src="../../images/share.png"></image>
+        分享
+    </button>
+    <block  wx:if="{{price>0&&!isMine}}">
+        <button class="addCar" bindtap="addCar" data-id="{{course.id}}">加入购物车</button>
+        <button class="purchase" bindtap="gotoPay">立即购买</button>
+    </block>
+    <block wx:if="{{price<=0&&!isMine}}">
+        <button class="addCourse" data-id="{{course.id}}" bindtap="addCourse">加入我的课程</button>
+    </block>
+    <block wx:if="{{isMine&&price<=0}}">
+        <button class="addCourse" data-id="{{course.id}}" bindtap="removeCourse">移除我的课程</button>
+    </block>
+    <block wx:if="{{isMine&&price>0}}">
+        <button class="addCourse" data-id="{{course.id}}" >已购买</button>
+    </block>
+    
+
+</view>

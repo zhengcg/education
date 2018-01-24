@@ -1,0 +1,24 @@
+<!--pages/about-us/about-us.wxml-->
+<!--头部导航-->
+<view class="about-us"><image src="../../images/about-us.png"></image></view>
+<!--公共条-->
+<view class="common-box"></view>
+<view class="list-block">
+  <view class="same" style="line-height:88rpx">公司简介</view>
+</view>
+
+<view class="about-text">
+    <view>{{obj.content}}</view>
+</view>
+<!--公共条-->
+<view class="common-box"></view>
+<view class="list-block">
+  <view class="same-1">客服电话：{{obj.tele}}2</view>
+</view>
+<!--<view class="list-block" bindtap="gotoForm">
+  <view class="same-1">电子邮箱: zimi@zimi0618.com</view>
+</view>-->
+<view class="list-block" bindtap="gotoForm">
+  <view class="same-1">{{obj.agree}}</view>
+  <image class="l-out" src="../../images/common-scroll.png"></image>
+</view>

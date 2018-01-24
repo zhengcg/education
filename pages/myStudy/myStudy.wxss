@@ -1,0 +1,43 @@
+.tabStudy{
+    height: 88rpx;background: #fff;
+}
+.tabStudy text{height: 48rpx;margin-top: 20rpx;line-height: 48rpx;font-size: 28rpx;color: #999;font-weight: bold;border-right: 1rpx solid #ddd;display: inline-block;width: 149rpx;text-align: center;}
+.tabStudy text.cur{color: #52cac3}
+.studyList{background: #fff;padding: 32rpx;}
+
+.table {
+    width: 684rpx;
+  border: 1rpx solid #ddd;
+  border-collapse: collapse;
+  margin: 0 auto
+}
+.tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 88rpx;
+  align-items: center;
+}
+.td {
+    justify-content: center;
+    text-align: center;
+    border-left: 1rpx solid #ddd;
+    border-bottom: 1rpx solid #ddd;
+    font-size: 24rpx;color: #666;
+    height: 88rpx;
+    border-collapse: collapse;
+    line-height: 88rpx;
+
+}
+.td image{width: 32rpx;height: 32rpx;display: block;margin: 0 auto;margin-top: 28rpx;}
+.th {
+  justify-content: center;
+  display: flex;
+  height: 88rpx;
+  align-items: center;
+   border-left: 1rpx solid #ddd;
+    border-bottom: 1rpx solid #ddd;
+  font-size: 28rpx;color: #666;font-weight: bold;
+  line-height: 88rpx;
+  border-collapse: collapse;
+}

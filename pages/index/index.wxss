@@ -1,0 +1,487 @@
+/**index.wxss**/
+/*公共部分*/
+.mainBox{height: 100%;position: relative;background: #fff}
+.common-box{
+    width: 100%;
+    height: 30rpx;
+    border: 1rpx solid #eeeeee;
+    background-color: #f9f9f9;
+}
+
+/*轮播图样式*/
+/*@import "../../common/lib/we-ui.wxss";*/
+.adbanners{
+    width: 750rpx;
+    height:380rpx;
+}
+.adbanners .adview image{
+    width: 750rpx;
+    height:auto;
+    display:initial;
+}
+.adbanners .adview{
+    width: 100%;
+    height:100%;
+}
+/*轮播图结束*/
+
+/*搜索框样式++++++++++++++++++++++++开始*/
+ /*icon {
+  vertical-align: middle;
+} */
+.search-cells {
+  width: 606rpx;
+  height: 58rpx;
+  border-radius: 8rpx;
+  position: absolute;
+  top: 32rpx;
+  left: 72rpx;
+  background-color: #FFFFFF;
+  color: #999999;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+.search-cells .section{display: inline-block;width: 130rpx;position: relative}
+.search-cells .picker{padding-left: 22rpx;line-height: 44rpx;border-right: 1rpx solid #ddd;height: 44rpx;margin-top: 7rpx;}
+.search-cells-after{
+    position: absolute;
+    top: 16rpx;
+    left: 22rpx;
+}
+
+.search-cells-icon1{
+    position: absolute;
+    width:18rpx;
+    height:10rpx;
+    top: 24rpx;
+    right: 20rpx;
+}
+.search-cells-input {
+    width: 411rpx;
+    height: 44rpx;
+    line-height: 44rpx;
+    position: absolute;
+    top: 5rpx;
+    left: 130rpx;
+    padding: 0rpx 0rpx 0rpx 20rpx;
+}
+.hotWord{position: absolute;background: #fff;top: 54rpx;width: 475rpx;left: 0;background:#f9f9f9;height: 600rpx;}
+.hotWord view{height: 60rpx;line-height:60rpx;padding-left: 20rpx;color: #666;font-size:#666; }
+.search-cells-input input{height: 44rpx;line-height: 44rpx;font-family: '微软雅黑';font-weight: normal;}
+
+.search-cells-icon2{
+    width: 24rpx;
+    height: 24rpx;
+    position: absolute;
+    top: 16rpx;
+    right: 21rpx;
+}
+/*搜索框++++++++++++++++++++++++++结束*/
+
+/*今天有约++++++++++++++++++++++++开始*/
+.today-tryst{
+    font-size: 32rpx;
+    color: #444444;
+    padding-left: 32rpx;
+    margin: 40rpx 0rpx 20rpx 0rpx;
+}
+/*直播时间=====================开始*/
+.time{
+    width: 100%;
+    height: 18rpx;
+    padding-left: 32rpx;
+    position: relative;
+    margin-bottom: 32rpx; 
+}
+.time .time-origin1{
+    width: 12rpx;
+    height: 12rpx;
+    float: left;
+    border-radius: 50%;
+    margin-top: 4rpx;
+    background-color: #999999;
+}
+.time .text1{
+    float: left; 
+    color: #999999;
+    font-size: 18rpx;
+    line-height: 18rpx;
+    margin: 0rpx 10rpx; 
+}
+
+.time .time-line1{
+    position: relative;
+    left: 0rpx; 
+    float:left;
+	width: 220rpx; 
+    height: 18rpx;
+}
+
+.time .time-line1:before{
+  content: " ";
+  width: 220rpx;
+  height: 1rpx;
+  position: absolute;
+  left: 0rpx;
+  top: 9rpx;
+  right: 0;
+  border-top: 1rpx solid #eee;
+  color: #eee;
+}
+
+ .time .time-origin2{
+    width: 12rpx;
+    height: 12rpx;
+    float: left;
+    border-radius: 50%;
+    margin: 4rpx 10rpx 0rpx 10rpx; 
+    background-color: #999999;
+}
+.time .text2{
+    float: left;
+    color: #999999;
+    font-size: 18rpx;
+    margin: 0rpx 10rpx 0rpx 0rpx; 
+}
+
+.time .time-line2:after {
+  content: " ";
+  width: 45%;
+  height: 1rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 9rpx;
+  border-top: 1rpx solid #D9D9D9;
+  color: #D9D9D9;
+}
+/*直播课堂显示*/
+
+/*
+.page-section-spacing{
+    width: 200%;
+    height: 328rpx;
+    overflow: auto;
+    float: left;
+    margin-left: 32rpx;
+}
+
+.scroll-view-item_H image{
+    width: 280rpx;
+    height:168rpx;
+    float: left;
+    margin-right: 32rpx;
+}*/
+
+
+/*今天有约直播课堂*/
+
+.scroll-view{
+    width: 200%;
+    height: 328rpx;
+    margin:0rpx 32rpx;
+}
+
+ .lists{
+    height: 328rpx;
+}
+
+.lists .adview-box{
+    float: left;
+}
+
+.lists image{
+    width: 280rpx;
+    height:168rpx;
+    /*float: left;*/
+    margin:0rpx 32rpx 11rpx 0rpx; 
+
+}
+
+.lists .adview-box-text{
+    width: 280rpx;
+    height: 160rpx;
+
+}
+.lists .adview-box-text{
+    font-size: 24rpx;
+    font-weight: bold;
+    color: #4c4c4c;
+    line-height: 42rpx;
+    white-space: normal;
+}
+
+.lists .adview-box-text .teacher-num .text1{
+    float: left;
+    font-weight: 200;
+} 
+
+.lists .adview-box-text .teacher-num .text2{
+    float: right;
+    color: #999999;
+    font-weight: 200;
+} 
+
+/*今天有约++++++++++++++++++++++++++结束*/
+
+
+/*我的课程++++++++++++++++++++++++++++开始*/
+.my-lesson{
+    width: 100%;
+}
+.my-lesson::after{content: '';clear: both;display: block;height: 0;}
+
+ .title{
+    width: 100%;
+    height:60rpx;
+    padding-top: 36rpx;
+}
+
+ .title .title-l{
+    font-size: 32rpx;
+    color: #444444;
+    float: left;
+    padding-left: 32rpx;
+}
+
+ .title .title-r{
+    font-size: 26rpx;
+    color: #999999;
+    float: right;
+    padding-right: 32rpx;
+
+}
+
+.title image{
+    width: 24rpx;
+    height: 24rpx;
+    float: right;
+    margin: 0rpx 12rpx 0rpx 0rpx;
+}
+.my-lesson .my{
+    width: 686rpx;
+    height: 262rpx;
+    margin: 0rpx 32rpx;
+    border-top: 1rpx solid #eeeeee;
+    /*border-bottom: 1rpx solid #eeeeee;*/
+    background: #fff;
+}
+
+.my-lesson .lesson{
+    width: 160rpx;
+    height: 200rpx;
+    float: left;
+    border-radius: 4rpx;
+    /*border: 1rpx solid red;*/
+    margin: 32rpx 32rpx 32rpx 0rpx;
+}
+
+.my-lesson .lesson image{
+    width: 160rpx;
+    height: 200rpx;
+}
+
+ /*.lesson-text{
+    width: 492rpx;
+    height: 200rpx;
+    float: left;
+}
+
+ .lesson-text .text1{
+    margin: 44rpx 0rpx 32rpx 0rpx;
+    font-size: 28rpx;
+    color: #444;
+}
+
+ .lesson-text .text1 image{
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 12rpx; 
+}
+
+ .lesson-text .text1 .text1-close{
+    font-size: 24rpx;
+    color: #ff6262;
+    float: right;
+}
+
+.my .lesson-text .text1 .text1-open{
+    font-size: 24rpx;
+    color: #57ccc5;
+    float: right;
+}
+
+.my .lesson-text .text1{
+    margin: 44rpx 0rpx 32rpx 0rpx;
+    font-size: 28rpx;
+    color: #444;
+}
+
+.my .lesson-text .text2{
+    margin: 0rpx 0rpx 52rpx 0rpx;
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.my .lesson-text .text2 image{
+    width: 18rpx;
+    height: 18rpx;
+    margin: 0rpx 16rpx 0rpx 44rpx;
+}
+
+.my .lesson-text .text3 .box{
+    width: 76rpx;
+    height: 32rpx;
+    float: left;
+    font-size: 24rpx;
+    color: #444;
+    margin: 0rpx 20rpx 0rpx 0rpx; 
+    text-align: center;
+    padding-top: 8rpx;
+    border-radius: 4rpx;
+    border: 1rpx solid #444444;
+
+}*/
+
+.my-lesson .my-lesson-foot{
+    width: 686rpx;
+    height: 110rpx;
+    margin: 0rpx 32rpx;
+    text-align: center;
+    border-top: 1rpx solid #eeeeee;
+    line-height: 110rpx;
+    font-size: 28rpx;
+}
+
+/*我的课程+++++++++++++++++++++++++++结束*/
+
+/*免费课程+++++++++++++++++++++++++++开始*/
+
+.free-course{
+    width: 100%;
+}
+
+.title .icon{
+    width: 10rpx;
+    height: 18rpx;
+    float: right;
+    margin-right: 32rpx;
+
+
+}
+
+.free-course .content-course{
+    width: 686rpx;
+    margin: 0rpx 32rpx;
+    padding-top:48rpx; 
+    border-top: 1rpx solid #eee;
+}
+.free-course .content-course::after{
+    clear: both;content:'';display: block;height: 0;
+}
+
+.free-course .content-box1{
+    width: 330rpx;
+    height: 334rpx;
+    float: left;
+    /*margin: 0rpx 32rpx;*/
+}
+
+.free-course .content-box2{
+    width: 330rpx;
+    height: 334rpx;
+    float: right;
+    /*margin: 0rpx 32rpx;*/
+}
+
+.free-course image{
+    width: 330rpx;
+    height: 220rpx;
+    float: left;
+}
+
+ .content-box-text{
+    width: 330rpx;
+    height: 114rpx;
+    float: left;
+}
+ .content-box-text .text{
+    font-size: 28rpx;
+    color: #444;
+    margin-top: 20rpx;
+    margin-bottom: 12rpx;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.content-box-text .teacher-num .text1{
+    margin: 0rpx 44rpx 34rpx 0rpx;
+    font-size: 24rpx;
+    color: #999999;
+    
+}
+.content-box-text .teacher-num .text2{
+    font-size: 24rpx;
+    color: #999999;
+    
+}
+/*免费课程====++++++++++++++++++++结束*/
+
+/*底部组件控制器=====================开始*/
+.bottommenu{
+    background-color: #f2f2f2;
+    border-top:1rpx solid #cccccc;
+    position: fixed;
+    bottom:0;
+    height: 96rpx;
+    width:100%;
+    color: #999999;
+    font-size: 20rpx
+}
+.bottommenu .menu{
+    margin-top:12rpx;
+    width:24%;
+    text-align: center;
+    float: left;
+}
+.bottommenu image{
+    width:44rpx;
+    height:44rpx;
+}
+
+.bottommenu .color{
+    color: #52cac3;
+}
+
+/*底部组件控制器=====================结束*/
+
+
+
+.tCon{white-space: nowrap;margin-left: 32rpx;width: 718rpx;background: #fff;height: 398rpx;border-bottom: 1rpx solid #eee;}
+.courseList{display: inline-block}
+
+.timeLine{position: relative;height: 44rpx;margin-bottom: 20rpx;}
+.dot{width: 12rpx;height: 12rpx;border-radius: 50%;display: inline-block;background:#e07be0;vertical-align: middle; }
+.timeLine text{padding: 0 10rpx;font-size: 18rpx;color: #999;}
+.timeLine .line{position: absolute;height: 21rpx;top: 0;border-bottom: 1rpx solid #eee;left: 80rpx;right: 10rpx;}
+/*.lists{}*/
+
+.content-course>view{position: relative;}
+.content-course>view .label{position: absolute;width: 100%;left: 0;height: 40rpx;color: #fff;font-size: 24rpx;line-height: 40rpx;text-align: center;background: rgba(0,0,0,0.4);top:180rpx; }
+.text1>text:first-of-type{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: inline-block;width:350rpx; }
+.my .lesson-text .text2 {margin-bottom: 42rpx;}
+.noneS{text-align:center;color:#666;line-height:100rpx;height:100rpx;border-top: 1rpx solid #eeeeee;width: 686rpx;margin: 0 auto}
+
+
+swiper-item view{position: absolute;width: 100%;height: 60rpx;line-height: 60rpx;bottom: 0;left: 0;color: #fff;font-size: 26rpx;background: rgba(0,0,0,0.7);text-align: center;}
+.my .lesson-text .text3 .box1 {
+    height: 40rpx;line-height: 40rpx;padding: 0
+}
+
+
+
+
+
+
+
+

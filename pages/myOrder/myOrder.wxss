@@ -1,0 +1,38 @@
+.tabBox{height: 88rpx;line-height: 88rpx;background: #fff;border-bottom: 1rpx solid #eee;}
+.tabBox>view{height: 48rpx;line-height: 48rpx;margin-top: 20rpx;text-align: center;font-size: 28rpx;color: #999;width: 50%;float: left;position: relative}
+.tabBox .cur text{border-bottom: 4rpx solid #52cac3;color: #52cac3;height: 64rpx;display: inline-block;}
+.complate-form{
+    height: 174rpx;
+    background-color: #fff;
+    border-bottom: 1rpx solid #eee;
+}
+
+.complate-form .buy-img{
+    width: 166rpx;
+    height: 110rpx;
+    float: left;
+    margin-top: 32rpx;
+    margin-right: 32rpx;
+}
+.complate-form .lesson-text{width: 460rpx;}
+.complate-form .lesson-text .text2 .teacher{
+    font-size: 24rpx;
+    color: #999999;
+}
+
+.complate-form .lesson-text .text2 .money{
+    font-size: 26rpx;
+    color: #ff6262;
+    margin-left: 32rpx;
+}
+.complate-form::after{clear: both;content: '';}
+.footer::after{clear: both;content: '';}
+.text1{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.orderList{background: #fff;padding: 0 32rpx;}
+.header{height: 96rpx;line-height: 96rpx;font-size: 28rpx;color: #444;position: relative;border-bottom: 1rpx solid #eee;}
+.header view{width: 32rpx;height: 32rpx;position: absolute;right: 32rpx;top: 32rpx;}
+.header view image{width: 32rpx;height: 32rpx;position: absolute;top: 0;left: 0}
+.footer{height: 96rpx;line-height: 96rpx;text-align: right;color: #999;font-size: 28rpx;position: relative}
+.footer text{color: #ff6262}
+.footer view{position: absolute;height: 96rpx;line-height: 96rpx;right: 0;top: 0}
+.footer button{position: absolute;left: 0;top: 16rpx;height: 64rpx;line-height: 64rpx;}

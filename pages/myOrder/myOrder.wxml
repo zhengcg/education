@@ -1,0 +1,33 @@
+<view class="tabBox">
+    <view class="{{selected==1?'cur':'default'}}" data-id='1' bindtap="selectTab"><text data-id='1' catchtap="selectTab">已购买</text></view>
+    <view class="{{selected==0?'cur':'default'}}" data-id='0' bindtap="selectTab"><text data-id='0' catchtap="selectTab">未支付</text></view>
+</view>
+<view class="common-box"></view>
+<block wx:for="{{lists}}" wx:key="{{item.id}}">
+<view class="orderList">
+    <view class="header">
+        <text>订单号：{{item.orderId}}</text>
+        <view bindtap="deleteOrder" data-id="{{item.orderId}}"><image src="../../images/delete.png"></image></view>
+    </view>
+     <view class="complate-form" wx:for="{{item.products}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="itemName">
+        <image class="buy-img" src="{{itemName.imgUrl}}" bindtap="gotoPlay" data-id="{{itemName.desc.courseId}}"></image>
+        <view class="lesson-text">
+                <view class="text1">
+                    <image wx:if="{{itemName.desc.subCode==1}}" src="../../images/yu.png"></image>
+                    <image wx:elif="{{itemName.desc.subCode==2}}" src="../../images/shu.png"></image>
+                    <image wx:elif="{{itemName.desc.subCode==3}}" src="../../images/ying.png"></image>
+                    <image wx:elif="{{itemName.desc.subCode==4}}" src="../../images/zheng.png"></image>
+                    <image wx:elif="{{itemName.desc.subCode==5}}" src="../../images/wu.png"></image>
+                    <image wx:elif="{{itemName.desc.subCode==6}}" src="../../images/hua.png"></image>
+                    <text  bindtap="gotoPlay" data-id="{{itemName.desc.courseId}}">{{itemName.productName}}</text>
+                </view>
+                <view class="text2">
+                    <text class="teacher">{{itemName.desc.teacher}}</text>
+                    <text class="money">￥{{itemName.cost}}</text>
+                </view>
+        </view>
+    </view>
+    <view class="footer"><button type="default" size="mini"  wx:if="{{selected==0}}" bindtap="payOrder" data-id="{{item.orderId}}">支付订单</button><view style="float:right">总计：<text>￥{{item.actureRmb}}</text></view></view>
+</view>
+<view class="common-box"></view>
+</block>

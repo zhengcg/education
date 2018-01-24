@@ -1,0 +1,48 @@
+<view class="account">
+<view class="money">{{account}}</view>
+<text>账户余额（元）</text>
+</view>
+<!--公共条-->
+<view class="common-box"></view>
+<view class="inputBox">
+ <input type="digit" placeholder="请输入充值金额"/>
+ <button>充值</button>
+</view>
+<view class="common-box"></view>
+<view class="groupView">
+<view class="titBox">
+密码保护
+</view>
+<view class="listBox">
+<text>密保手机</text>
+<input type="number" />
+<text class="btn">未绑定</text>
+<image class="l-out" src="{{out}}"></image>
+</view>
+<view class="listBox">
+<text>密保邮箱</text>
+<input type="text" value="am@qq.com"/>
+<text class="btn">已绑定</text>
+<image class="l-out" src="{{out}}"></image>
+</view>
+</view>
+
+<view class="common-box"></view>
+
+<view class="groupView">
+<view class="titBox">
+账户绑定
+</view>
+<view class="listBox">
+<text>QQ绑定</text>
+<input type="number" />
+<text class="btn">未绑定</text>
+<image class="l-out" src="{{out}}"></image>
+</view>
+<view class="listBox">
+<text>微信绑定</text>
+<input type="text" />
+<text class="btn">未绑定</text>
+<image class="l-out" src="{{out}}"></image>
+</view>
+</view>

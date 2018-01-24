@@ -1,0 +1,63 @@
+<!--pages/my/my.wxml-->
+<!--个人中心-->
+<view class="mian">
+<!--头部-->
+<view class="picture">
+  <image class="p-header" src="{{avatarUrl}}"  bindtap="toUserInfo"></image>
+  <text class="p-text">{{nickName}}</text>
+</view>
+<!--公共条-->
+<view class="common-box"></view>
+<!--我的订单-->
+
+<view class="list-block1" bindtap="gotoForm">
+  <image class="icon" src="{{icon1}}"></image>
+  <view class="same">我的订单</view>
+  <image class="l-out" src="{{out}}"></image>
+</view>
+<!--<view class="list-block" bindtap="gotoMyAccount">
+  <image class="icon" src="{{icon2}}"></image>
+  <view class="same" >我的账户</view>
+  <image class="l-out" src="{{out}}"></image>
+</view>-->
+
+<view class="list-block" bindtap="gotoCar">
+  <image class="icon" src="{{icon7}}"></image>
+  <view class="same" >购物车</view>
+  <image class="l-out" src="{{out}}"></image>
+</view>
+<!--公共条-->
+<view class="common-box"></view>
+<view class="list-block1" bindtap="gotoMyMessage">
+   <image class="icon" src="{{icon3}}"></image>
+   <view class="same">我的消息</view>
+   <image class="l-out" src="{{out}}"></image>
+</view>
+<view class="list-block"  bindtap="gotoMyStudy">
+<image class="icon" src="{{icon4}}"></image>
+   <view class="same">我的学习</view>
+   <image class="l-out" src="{{out}}"></image>
+</view>
+<!--公共条-->
+<view class="common-box"></view>
+<view class="list-block1" bindtap="toaboutUs">
+   <image class="icon" src="{{icon5}}"></image>
+   <view class="same">关于我们</view>
+   <image class="l-out" src="{{out}}"></image>
+</view>
+<view class="list-block" bindtap="setting">
+    <image class="icon" src="{{icon6}}"></image>
+    <view class="same">设置</view>
+    <image class="l-out" src="{{out}}" bindtap="totelLogin"></image>
+</view>
+</view>
+
+
+
+
+
+
+
+
+
+

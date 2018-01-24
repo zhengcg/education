@@ -1,0 +1,18 @@
+.account{height: 240rpx;background: #52cac3}
+.money{text-align: center;color: #fff;font-size: 80rpx;font-weight: bold;padding-top: 50rpx;}
+.account text{text-align: center;margin-top: 40rpx;font-size: 24rpx;color: #fff;display: block}
+.inputBox{background: #fff;height: 88rpx;line-height: 88rpx;padding-left: 36rpx;position: relative}
+.inputBox input{height: 88rpx;line-height: 88rpx;color: #999;font-size: 28rpx;}
+.inputBox button{position: absolute;right: 0;top: 0;height: 88rpx;line-height: 88rpx;width: 222rpx;text-align: center;border: none!important;background: #fff;color: #52cac3;font-size: 28rpx;border-radius: 0}
+.inputBox button::after{content:none}
+.groupView{background: #fff;padding: 0 32rpx;}
+.groupView .titBox{height: 98rpx;line-height: 98rpx;font-size: 32rpx;color: #444;border-bottom: 1px solid #eee;}
+.listBox{height: 88rpx;line-height: 88rpx;padding: 0 4rpx;font-size: 28rpx;color: #666;border-bottom: 1px solid #eee;position: relative;}
+.listBox input{position: absolute;height: 88rpx;line-height: 88rpx;left: 120rpx;top: 0;right: 120rpx;}
+.listBox .btn{position: absolute;right: 41rpx;top: 0;height: 88rpx;line-height: 88rpx;font-size: 22rpx;color: #999;}
+.l-out {
+width:15rpx;
+height:22rpx;
+float:right;
+margin-top:33rpx;
+}

@@ -1,0 +1,14 @@
+/* pages/knowledge/knowledge.wxss */
+.container{
+    /*padding: 0rpx;*/
+    padding: 254rpx 0rpx 0rpx 0rpx;
+
+    
+}
+.container image{
+    width: 326rpx;
+    height: 338rpx;
+}
+
+
+

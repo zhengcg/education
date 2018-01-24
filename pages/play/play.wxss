@@ -1,0 +1,57 @@
+.tc{width: 750rpx;height: 340rpx;}
+.shadeDiv{width: 750rpx;height: 340rpx;background:#000;}
+.shadeDiv image{display: block;height: 100%;margin: 0 auto;width: auto}
+.tc video{width: 100%;height: 100%;}
+.tabBox{height: 88rpx;line-height: 88rpx;background: #fff;border-bottom: 1rpx solid #eee;}
+.tabBox>view{height: 48rpx;line-height: 48rpx;margin-top: 20rpx;text-align: center;font-size: 28rpx;color: #999;width: 250rpx;float: left;position: relative}
+.tabBox>view:nth-child(2){border-left: 1rpx solid #eee;border-right: 1rpx solid #eee;width: 246rpx;}
+.tabBox .cur text{border-bottom: 4rpx solid #52cac3;color: #52cac3;height: 64rpx;display: inline-block;}
+
+.playCon{padding: 36rpx;background: #fff;}
+.foot{position: fixed;bottom: 0;height: 96rpx;width: 750rpx;left: 0;background: #f2f2f2;}
+.shareBtn{width:180rpx;height: 96rpx;text-align: center;font-size: 22rpx;color: #46d6ce;padding: 0;position: absolute;left: 0;border: none;background: #f2f2f2;}
+.shareBtn::after{content: none;}
+.shareBtn image{width: 40rpx;height: 34rpx;display: block;margin: 10rpx auto 3rpx auto;}
+.addCar{width: 250rpx;height: 70rpx;position: absolute;top: 13rpx;left: 188rpx;background: #fdaf4a;border-radius: 10rpx;color: #fff;font-size: 28rpx;box-shadow: 0rpx 5rpx 3rpx rgba(0, 0, 0, .3)}
+.purchase{width: 250rpx;height: 70rpx;position: absolute;top: 13rpx;right: 32rpx;background: #fd794a;border-radius: 10rpx;color: #fff;font-size: 28rpx;box-shadow: 0rpx 5rpx 3rpx rgba(0, 0, 0, .3)}
+.zan{background: #fff;height: 136rpx;text-align: center;}
+.zan image{width: 32rpx;height: 32rpx;margin-right: 20rpx;margin-top: 38rpx;}
+.zan text{color: #999;font-size: 32rpx;margin-top: 40rpx;}
+.zan view{margin-top: 20rpx;font-size: 22rpx;color: #999;}
+.sections{background: #fff;height: 110rpx;padding: 20rpx 32rpx;border-bottom: 1rpx solid #eee;}
+.section textarea{height: 110rpx;font-size: 24rpx;color: #999;line-height: 44rpx;width: 686rpx;}
+.submit{position: relative;height: 88rpx;padding: 0 32rpx;background: #fff;line-height: 88rpx;}
+.submit input{font-size: 24rpx;color: #999;width: 150rpx;margin-right: 40rpx;display: inline-block;}
+.submit image{width: 140rpx;height: 60rpx;margin-top: 14rpx;}
+.submit view{width: 222rpx;height: 44rpx;border-left: 1rpx solid #52cac3;position: absolute;right: 0;top: 22rpx;text-align: center;font-size: 26rpx;color: #52cac3;line-height: 44rpx;}
+.commmetList{background: #fff;padding: 0 32rpx;}
+.commmetList>view{padding: 22rpx 0;border-bottom:1rpx solid #eee;}
+.commmetList>view:last-of-type{border: none}
+.commmetList>view::after{clear: both;content: '';display: block;height: 0}
+.commmetList>view .imgBox{float: left;width: 88rpx;height: 88rpx;margin-right: 32rpx;border-radius: 50%;overflow: hidden;}
+.commmetList>view .imgBox image{width: 88rpx;height: 88rpx;}
+.commmetList>view .con{float: left;width: 345rpx;}
+.commmetList>view .con .tit{font-size: 28rpx;color: #666;height: 50rpx;line-height: 50rpx;}
+.commmetList>view .con text{font-size: 22rpx;color: #666;line-height: 38rpx;}
+.commmetList>view .date{float: left;padding-top: 18rpx;color: #999;font-size: 22rpx;padding-left: 10rpx;}
+.courseList{padding: 0 32rpx;background: #fff;}
+.courseList>view{height: 88rpx;line-height: 88rpx;border-bottom: 1rpx solid #eee;color: #666;font-size: 24rpx;position: relative}
+.courseList>view:last-of-type{border: none}
+.courseList>view text{display: inline-block;width: 660rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 28rpx;}
+.courseList>view image{display: none;width: 16rpx;height: 20rpx;position: absolute;right: 8rpx;top: 34rpx;}
+.courseList>view.cur{color: #52cac3;}
+.courseList>view.cur image{display: block;}
+.addCourse{width: 250rpx;height: 70rpx;position: absolute;top: 13rpx;left: 334rpx;background: #52cac3;border-radius: 10rpx;color: #fff;font-size: 28rpx;box-shadow: 0rpx 5rpx 3rpx rgba(0, 0, 0, .3)}
+.playCon .h1{font-size: 28rpx;color: #333;font-weight: bolder;line-height: 80rpx;}
+.playCon text{font-size: 26rpx;color: #666;line-height: 40rpx;}
+.bindFormSubmit{background: #fff;}
+.bindFormSubmit::after{clear: both;content: '';}
+.bindFormSubmit view.textArea{padding:15rpx 32rpx;border-bottom: 1rpx solid #eee;height: 120rpx;}
+.bindFormSubmit view.textArea textarea{color: #999;font-size: 24rpx;line-height: 44rpx;height: 120rpx;width: 686rpx;}
+.bindFormSubmit view.butArea{background: #fff;height: 88rpx;padding: 0 32rpx;text-align: right}
+.bindFormSubmit view.butArea button{border: none;background: #fff;display: inline-block;font-size: 26rpx;color: #52cac3;width: 222rpx;height: 44rpx;line-height: 44rpx;margin-top: 22rpx;border-left: 1rpx solid #52cac3;border-radius: 0;}
+.bindFormSubmit view.butArea button::after{content: none;}
+.v1{color: #eee;font-size: 24rpx;padding: 20rpx;}
+.v2{color: #46d6ce;font-size: 32rpx;text-align: center;padding: 15rpx 0;}
+.v3{color: red;font-size: 32rpx;text-align: center;padding: 15rpx 0;}
+.v4{left: 50%;margin-left: -125rpx;top:240rpx;height: 50rpx;line-height: 50rpx;}

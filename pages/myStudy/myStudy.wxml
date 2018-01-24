@@ -1,0 +1,28 @@
+<view class="study">
+    <view class="tabStudy">
+        <text class="{{selected?'cur':'default'}}" bindtap="selected">日</text>
+        <text class="{{selected1?'cur':'default'}}" bindtap="selected1">周</text>
+        <text class="{{selected2?'cur':'default'}}" bindtap="selected2">月</text>
+        <text class="{{selected3?'cur':'default'}}" bindtap="selected3">学期</text>
+        <text class="{{selected4?'cur':'default'}}" bindtap="selected4" style="border:none;">学年</text>
+    </view>
+    <view class="common-box"></view>
+    <view class="studyList">
+        <view class="table">
+            <view class="tr">
+                <view class="th" style="width:180rpx;border-left:none">科目</view>
+                <view class="th" style="width:504rpx;">课程</view>
+                
+            </view>
+            <block wx:for="{{listData}}" wx:key="{{item.uid}}">
+                <view class="tr">
+                    <view class="td" style="width:180rpx;border-left:none">{{item.cname}}</view>
+                    <view class="td" style="width:400rpx;">{{item.studyTime}}</view>
+                    <view class="td" style="width:104rpx;border-left:none"><image class="l-out" src="{{videoIcon}}"></image></view>                   
+                </view>               
+            </block>
+        </view>
+
+    </view>
+
+</view>

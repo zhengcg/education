@@ -1,0 +1,40 @@
+<view class="addCourse" bindtap="gotoSearch" wx:if="{{car.length==0}}">选课</view>
+<view class="car">
+    
+    <view class="tit"  wx:if="{{car.length>0}}">
+        <label>
+             <checkbox-group bindchange="checkedAll"><checkbox value="1" checked="{{checkAll}}"/> <text>合并</text></checkbox-group>
+        </label>       
+    </view>
+    <checkbox-group bindchange="checkboxChange">
+        <view class="carList" wx:for="{{car}}" wx:key="{{item.businessId}}" data-id="{{item.businessId}}">
+            <label>
+                <checkbox value="{{item.businessId}}" checked="{{checked}}"/>
+            </label>
+            <view class="con" >
+                <view class="imgBox" bindtap="gotoPlay" data-id="{{item.businessId}}"><image src="{{item.picUrl}}"></image></view>
+                <view class="cons">
+                    <view class="consT">
+                    <image wx:if="{{item.desc.subCode==1}}" src="../../images/yu.png"></image>
+                    <image wx:elif="{{item.desc.subCode==2}}" src="../../images/shu.png"></image>
+                    <image wx:elif="{{item.desc.subCode==3}}" src="../../images/ying.png"></image>
+                    <image wx:elif="{{item.desc.subCode==4}}" src="../../images/zheng.png"></image>
+                    <image wx:elif="{{item.desc.subCode==5}}" src="../../images/wu.png"></image>
+                    <image wx:elif="{{item.desc.subCode==6}}" src="../../images/hua.png"></image>
+                    <text  bindtap="gotoPlay" data-id="{{item.businessId}}">{{item.name}}</text>
+                    </view>
+                    <view class="teacher">{{item.desc.teacher}}<text>￥{{item.price}}</text></view>
+                </view>
+                <view class="delete" bindtap="removeCar" data-id="{{item.businessId}}" data-index="{{index}}"><image src="../../images/delete.png"></image></view>
+            </view>
+        </view>       
+    </checkbox-group>
+    <view style="height:100rpx;"></view>
+    
+    <view class="foot">
+        <view class="he">
+            合计：<text>￥{{money}}</text>
+        </view>
+        <view class="btn" bindtap="gotoPay">结算</view>
+    </view>
+</view>

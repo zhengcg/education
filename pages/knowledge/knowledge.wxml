@@ -1,0 +1,12 @@
+<!--pages/knowledge/knowledge.wxml-->
+<!--见识页面?-->
+<view class="container">
+    <image src="{{onload}}"></image>
+
+</view>
+<!--<view class="bottommenu">
+    <view class="menu color" data-id="0" bindtap="gotoIndex" ><image src="{{menu1}}" /><view>报达</view></view>
+    <view class="menu" data-id="102" bindtap="gotoKnowledge"><image src="{{menu2}}" /><view>见识</view></view>
+    <view class="menu" data-id="108" bindtap="gotoMember"><image src="{{menu3}}"/><view>会员</view></view>
+    <view class="menu" data-id="110" bindtap="gotoCenter" ><image  src="{{menu4}}"/><view>个人中心</view></view>
+</view>-->

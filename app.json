@@ -1,0 +1,59 @@
+{
+  "pages":[   
+    "pages/index/index",
+    "pages/about-us/about-us",
+    "pages/tel-enroll/tel-enroll",
+    "pages/course-content/course-content",
+    "pages/order-payment/order-payment",   
+    "pages/userinfo/userinfo",    
+    "pages/my/my",
+    "pages/vip/vip",
+    "pages/logs/logs",
+    "pages/login/login",
+    "pages/myOrder/myOrder",
+    "pages/knowledge/knowledge",
+    "pages/myAccount/myAccount",
+    "pages/myMessage/myMessage",
+    "pages/myStudy/myStudy",
+    "pages/setting/setting",
+    "pages/course/course",
+    "pages/freeCourse/freeCourse",
+    "pages/myCourse/myCourse",
+    "pages/loveCourse/loveCourse",
+    "pages/play/play",
+    "pages/car/car",
+    "pages/agree/agree"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#52cac3",
+    "navigationBarTitleText": "智慧",
+    "navigationBarTextStyle":"#ffffff"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color":"#999999",
+    "selectedColor":"#52cac3",
+    "backgroundColor":"#f2f2f2",
+    "borderStyle":"#cccccc",
+
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "智慧",
+      "iconPath": "./images/index-light2.png",
+      "selectedIconPath": "./images/index-light1.png"
+    },
+    {
+      "pagePath": "pages/my/my",
+      "text": "我的",
+      "iconPath": "./images/index-head2.png",
+      "selectedIconPath": "./images/index-head1.png"
+    }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+<view class="message">
+    <view class="common-box"></view>
+    <view class="msgList">
+        <view class="msgTit">十一补课通知<text>2016.9.30</text></view>
+        <view class="msgCon">
+            <text>小明，你好！</text>
+            <text>把户口还是卡等级卡萨喝咖啡肯定是房间看电视</text>
+        </view>
+    </view>
+    <view class="common-box"></view>
+    <view class="msgList">
+        <view class="msgTit">十一补课通知<text>2016.9.30</text></view>
+        <view class="msgCon">
+            <text>小明，你好！</text>
+            <text>把户口还是卡等级卡萨喝咖啡肯定是房间看电视</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,11 @@
+.setting .list{background: #fff;height: 88rpx;line-height: 88rpx;padding: 0 32rpx;}
+.setting .list text{font-size: 28rpx;color: #666;}
+.l-out {
+width:15rpx;
+height:22rpx;
+float:right;
+margin-top:33rpx;
+}
+.setting .list switch{float: right}
+.btn{margin-top: 50rpx;width: 690rpx;margin-left: auto;margin-right: auto;}
+.btn button{border-radius: 10rpx;color: #fff;font-size: 36rpx;background: #52cac3;border: 1rpx solid #43bdb6}

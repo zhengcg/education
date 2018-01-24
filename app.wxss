@@ -1,0 +1,179 @@
+/**app.wxss**/
+page{
+  font-size: 28rpx;
+    background-color: #f9f9f9;
+}
+.container {
+  font-family: '微软雅黑';
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+/*公共模块*/
+.common-box{
+    width: 100%;
+    height: 32rpx;
+    /*border: 1rpx solid #eeeeee;*/
+    background-color: #f9f9f9;
+}
+
+/*首页我的课堂,订单公共样式  ==============开始*/
+
+ .lesson-text{
+    width: 492rpx;
+    height: 200rpx;
+    float: left;
+}
+
+
+ .lesson-text .text1 image{
+    width: 28rpx;
+    height: 28rpx;
+    margin-right: 12rpx; 
+}
+
+ .lesson-text .text1 .text1-close{
+    font-size: 24rpx;
+    color: #ff6262;
+    float: right;
+}
+
+.my .lesson-text .text1 .text1-open{
+    font-size: 24rpx;
+    color: #57ccc5;
+    float: right;
+}
+
+ .lesson-text .text1{
+    margin: 44rpx 0rpx 32rpx 0rpx;
+    font-size: 28rpx;
+    color: #444;
+}
+
+
+.my .lesson-text .text2{
+    margin: 0rpx 0rpx 52rpx 0rpx;
+    font-size: 28rpx;
+    color: #999999;
+}
+
+.my .lesson-text .text2 image{
+    width: 18rpx;
+    height: 18rpx;
+    /*background-color: red;*/
+    margin: 0rpx 16rpx 0rpx 44rpx;
+}
+
+.my .lesson-text .text3 .box{
+    width: 76rpx;
+    height: 32rpx;
+    float: left;
+    font-size: 24rpx;
+    color: #444;
+    margin: 0rpx 20rpx 0rpx 0rpx; 
+    text-align: center;
+    /*vertical-align: middle;*/
+    padding-top: 8rpx;
+    border-radius: 4rpx;
+    border: 1rpx solid #444444;
+
+}
+
+/*首页我的课堂,订单公共样式  ==============结束*/
+
+/*功能条列表===my  userinfo  我的账户  我的学习  about-us  课堂内容  设置  注册  搜索 推荐 报达总部*/
+.list-block1{
+  width:100%;
+  height: 88rpx;
+  background-color: #fff;
+}
+
+.list-block{
+  width:100%;
+  height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+}
+
+.list-block{
+  width:100%;
+  height: 88rpx;
+  background-color: #fff;
+  border-top: 1rpx solid #eee;
+}
+
+.list-block .same{
+  color: #999999;
+  margin-left: 42rpx;
+  /*margin-top: 30rpx;*/
+  /*line-height: 88rpx;*/
+  float: left;
+}
+.list-block .r-same{
+  color: #444;
+  float: right;
+  /*margin: 30rpx 45rpx 0rpx 0rpx;*/
+}
+
+.list-block .r-same1{
+  color: #444;
+  float: right;
+  /*margin-top: 30rpx;*/
+}
+
+.list-block1{
+  width:100%;
+  height: 88rpx;
+  background-color: #fff;
+}
+
+.list-block1 .same{
+  color: #999999;
+  margin-left: 42rpx;
+  /*margin-top: 30rpx;*/
+  float: left;
+}
+.list-block1 .r-same{
+  color: #444;
+  float: right;
+  /*margin: 30rpx 45rpx 0rpx 0rpx;*/
+}
+
+.list-block1 .r-same1{
+  color: #444;
+  float: right;
+  /*margin-top: 30rpx;*/
+}
+
+
+/*底部组件控制器=====================开始*/
+.bottommenu{
+    background-color: #f2f2f2;
+    border-top:1rpx solid #cccccc;
+    position: fixed;
+    bottom:0;
+    height: 96rpx;
+    width:100%;
+    color: #999999;
+    font-size: 20rpx
+}
+.bottommenu .menu{
+    margin-top:12rpx;
+    width:24%;
+    text-align: center;
+    float: left;
+}
+.bottommenu image{
+    width:44rpx;
+    height:44rpx;
+}
+
+.bottommenu .color{
+    color: #52cac3;
+}
+
+/*底部组件控制器=====================结束*/
